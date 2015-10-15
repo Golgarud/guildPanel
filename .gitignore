@@ -1,2 +1,7 @@
-.sass-cache
+/cache/.sass-cache/*
+!/cache/.sass-cache/index.html
+/cache/.smarty-cache/*
+!/cache/.smarty-cache/index.html
+/cache/.smarty-compile/*
+!/cache/.smarty-compile/index.html
 *.css.map
