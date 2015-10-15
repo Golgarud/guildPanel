@@ -4,4 +4,5 @@
 !/cache/.smarty-cache/index.html
 /cache/.smarty-compile/*
 !/cache/.smarty-compile/index.html
+prepros.cfg
 *.css.map

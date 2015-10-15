@@ -17,7 +17,7 @@ $conffRoot = array(
 	"cache"				=>			CACHE_DIR,
 	"cache_smarty"		=>			CACHE_SMARTY_DIR,
 	"cache_smarty_c"	=>			CACHE_SMARTY_COMPILE,
-	"tmplate"			=>			TEMPLATE_DIR,
+	"template"			=>			TEMPLATE_DIR,
 	"img"				=>			IMG_DIR,
 	"js"				=>			JS_DIR,
 	"css"				=>			CSS_DIR,
@@ -25,5 +25,3 @@ $conffRoot = array(
 );
 $smarty->assign("dir", $conffRoot);
 ?>
-
-    
