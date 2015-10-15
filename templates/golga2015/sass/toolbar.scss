@@ -1,0 +1,18 @@
+@import "compass";
+@import "var";
+#main-toolbar{
+	position: relative;
+	display: block;
+	min-height: 100vh;
+	width: 6rem;
+	float: left;
+
+	li{
+		position: relative;
+		display: block;
+		width: 6rem;
+		height: 6rem;
+		list-style-type: none;
+		@include background-image(radial-gradient(45px 45px, $main-color 10px, $lighter-color 30px));
+	}
+}

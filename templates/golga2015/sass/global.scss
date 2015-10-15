@@ -1,9 +1,12 @@
+@import "compass";
 @import "compass/reset";
 @import "var";
+@import "toolbar";
 
 html{
 	font-size:10px;//INIT REM DO NOT REMOVE!
 	width:100vw;
+	min-width:30rem;
 	overflow-x: hidden;
 }
 
@@ -14,6 +17,7 @@ html{
 
 	font-size:1.6rem;
 	background-color: $main-color;
+	@include clearfix;
 }
 #footer{
 	position:relative;

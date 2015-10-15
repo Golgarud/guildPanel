@@ -9,6 +9,8 @@
 	<link rel="stylesheet" href="{$dir.css}/global.css">
 </head>
 <body>
-<div id="page" class="col-sm-12">
+<div id="page">
 	<main class="main" id="main">
-plop
+	<header id="main-header" class="header">
+		plop
+	</header><!-- /header -->
