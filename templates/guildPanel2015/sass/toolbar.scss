@@ -12,7 +12,9 @@
 		display: block;
 		width: 6rem;
 		height: 6rem;
+		color:white;
 		list-style-type: none;
-		@include background-image(linear-gradient($startlight 0.1rem, $startdark 0.1rem, $endlight 4.7rem, $enddark 4.7rem));
+		cursor:pointer;
+		@include background-image(linear-gradient($startlight 0.1rem, $startdark 0.1rem, $endlight 6rem, $enddark 6rem));
 	}
 }

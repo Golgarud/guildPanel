@@ -1,0 +1,40 @@
+/*clearfix*/
+/* line 5, ../sass/panel.scss */
+#panel:after {
+  content: ' ';
+  display: block;
+  clear: both;
+}
+
+/* line 11, ../sass/panel.scss */
+.module {
+  width: 150px;
+  height: 150px;
+  float: left;
+  background: #101010;
+}
+
+/* line 18, ../sass/panel.scss */
+.module:hover {
+  /*Some cool hover style*/
+}
+
+/* line 22, ../sass/panel.scss */
+.module2 {
+  width: 200px;
+  height: 200px;
+}
+
+/* line 26, ../sass/panel.scss */
+.module-little {
+  width: 100px;
+  height: 100px;
+}
+
+/* line 30, ../sass/panel.scss */
+.module.is-dragging,
+.module.is-positioning-post-drag {
+  border-color: white;
+  background: #09F;
+  z-index: 2;
+}
