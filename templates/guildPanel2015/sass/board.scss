@@ -2,41 +2,67 @@
 @import "var";
 
 /*clearfix*/
+
 .board:after {
 	@include clearfix;
 }
 
-.module{
+.module {
 	width: 10rem;
 	height: 10rem;
 	float: left;
+	z-index: 0;
 	background: $darker-color;
-	&.module-disclaimer{
-		background:red;
+	//events
+	&:hover {
+		.module-option {
+			display: block;
+			z-index: 20;
+		}
 	}
-	&.module-icon{
-		background:none;
+	//module sizer
+	&.module-disclaimer {
+		background: red;
 	}
-	&.module-2w{
+	&.module-icon {
+		background: none;
+	}
+	&.module-2w {
 		width: 20rem;
 	}
-	&.module-3w{
+	&.module-3w {
 		width: 30rem;
 	}
-	&.module-4w{
+	&.module-4w {
 		width: 40rem;
 	}
-	&.module-2h{
+	&.module-2h {
 		height: 20rem;
 	}
-	&.module-3h{
+	&.module-3h {
 		height: 30rem;
 	}
-	&.module-4h{
+	&.module-4h {
 		height: 40rem;
 	}
+	//inside module element
 	.module-content {
-		padding:0.5rem;
+		padding: 0.5rem;
+		height: 100%;
+		width: 100%;
+		display: block;
+		float: left;
+	}
+	.module-option {
+		position: absolute;
+		top: -1.7rem;
+		left: 0;
+		min-width: 5rem;
+		display: none;
+		background-color: lightgrey;
+		.fa-arrows {
+			display:none;
+		}
 	}
 }
 
@@ -44,14 +70,16 @@
 	/*Some cool hover style*/
 }
 
-.module2{
-	width:20rem;
-	height:20rem;
+.module2 {
+	width: 20rem;
+	height: 20rem;
 }
-.module-little{
+
+.module-little {
 	width: 5rem;
 	height: 5rem;
 }
+
 .module.is-dragging,
 .module.is-positioning-post-drag {
 	border-color: white;

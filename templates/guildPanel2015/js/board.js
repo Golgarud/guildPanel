@@ -12,4 +12,18 @@ $(document).ready(function () {
 		var draggie = new Draggabilly(itemElem);
 		$board.packery('bindDraggabillyEvents', draggie);
 	});
+
+	$('.module-option .fa-close').on('click',function(){
+		$(this).parents('.module').remove();
+	});
+	$('.module-option .fa-thumb-tack').on('click',function(){
+		$('#board').packery('stamp',$(this).parents('.module'));
+		$(this).hide();
+		$(this).parent().children('.fa-arrows').show();
+	});
+	$('.module-option .fa-arrows').on('click',function(){
+		$('#board').packery('stamp',$(this).parents('.module'));
+		$(this).hide();
+		$(this).parent().children('.fa-thumb-tack').show();
+	});
 });
