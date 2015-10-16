@@ -1,0 +1,28 @@
+/* line 4, ../sass/header.scss */
+#main-header {
+  position: relative;
+  display: block;
+  height: 3.5rem;
+  width: 100%;
+  background-color: #101010;
+}
+/* line 11, ../sass/header.scss */
+#main-header h1 {
+  position: relative;
+  display: block;
+  width: auto;
+  float: left;
+  margin-top: 0.4rem;
+  margin-right: 2rem;
+  color: #4E5050;
+  font-size: 2rem;
+}
+
+/* line 24, ../sass/header.scss */
+#main-logo {
+  position: relative;
+  display: block;
+  float: left;
+  margin-left: 1.1rem;
+  margin-right: 1.1rem;
+}

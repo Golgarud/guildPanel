@@ -41,5 +41,8 @@ define("TEMPLATE_DIR", rp("./templates/guildPanel2015") );
 define("IMG_DIR", TEMPLATE_DIR."/img");
 define("JS_DIR", TEMPLATE_DIR."/js");
 define("CSS_DIR", TEMPLATE_DIR."/css");
-define("adm_DIR", TEMPLATE_DIR."/adm");
+define("ADM_DIR", TEMPLATE_DIR."/adm");
+
+// Modules
+define("MOD_DIR", rp("./modules") );
 ?>

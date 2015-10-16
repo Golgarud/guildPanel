@@ -1,5 +1,5 @@
 
-	<footer id="footer" class="footer">
+	<footer id="main-footer" class="footer">
 
 	</footer>
 </div><!-- #page end -->

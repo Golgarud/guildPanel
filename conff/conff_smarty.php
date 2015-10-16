@@ -21,7 +21,8 @@ $conffRoot = array(
 	"img"				=>			IMG_DIR,
 	"js"				=>			JS_DIR,
 	"css"				=>			CSS_DIR,
-	"adm"				=>			adm_DIR
+	"mod"				=>			MOD_DIR,
+	"adm"				=>			ADM_DIR
 );
 $smarty->assign("dir", $conffRoot);
 ?>

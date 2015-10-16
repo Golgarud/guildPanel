@@ -1,0 +1,39 @@
+/*clearfix*/
+/* line 5, ../sass/board.scss */
+.board:after {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 9, ../sass/board.scss */
+.module {
+  width: 15rem;
+  height: 15rem;
+  float: left;
+  background: #101010;
+}
+
+/* line 16, ../sass/board.scss */
+.module:hover {
+  /*Some cool hover style*/
+}
+
+/* line 20, ../sass/board.scss */
+.module2 {
+  width: 20rem;
+  height: 20rem;
+}
+
+/* line 24, ../sass/board.scss */
+.module-little {
+  width: 10rem;
+  height: 10rem;
+}
+
+/* line 28, ../sass/board.scss */
+.module.is-dragging,
+.module.is-positioning-post-drag {
+  border-color: white;
+  background: #09F;
+  z-index: 2;
+}

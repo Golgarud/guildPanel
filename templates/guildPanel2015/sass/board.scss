@@ -1,0 +1,33 @@
+@import "compass";
+@import "var";
+
+/*clearfix*/
+.board:after {
+	@include clearfix;
+}
+
+.module{
+	width: 15rem;
+	height: 15rem;
+	float: left;
+	background: $darker-color;
+}
+
+.module:hover {
+	/*Some cool hover style*/
+}
+
+.module2{
+	width:20rem;
+	height:20rem;
+}
+.module-little{
+	width: 10rem;
+	height: 10rem;
+}
+.module.is-dragging,
+.module.is-positioning-post-drag {
+	border-color: white;
+	background: #09F;
+	z-index: 2;
+}
