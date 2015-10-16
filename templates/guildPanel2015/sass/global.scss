@@ -5,24 +5,37 @@
 @import "footer";
 @import "toolbar";
 @import "board";
-
-html{
-	font-size:10px;//INIT REM DO NOT REMOVE!
-	width:100vw;
-	min-width:30rem;
+html {
+	font-size: 10px; //INIT REM DO NOT REMOVE!
+	width: 100%;
+	min-width: 30rem;
 	overflow-x: hidden;
 }
 
-#page, #main{
-	position:relative;
-	display:block;
-	min-height: 100vh;
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
 
-	font-size:1.6rem;
+#page,
+#main {
+	position: relative;
+	display: block;
+	min-height: 100vh;
+	font-size: 1.6rem;
 	background-color: $main-color;
 	@include clearfix;
 }
-.img-responcive{
+
+#main {
+	padding-left: 2.5rem;
+	padding-right: 2.5rem;
+	padding-top:2.5rem;
+
+}
+
+.img-responcive {
 	width: auto;
 	height: auto;
 	max-width: 100%;
