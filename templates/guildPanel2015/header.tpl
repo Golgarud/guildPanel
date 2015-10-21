@@ -24,6 +24,8 @@
 			<input class="input input-auth insc-only" type="tel" name="log-tel" value="" placeholder="telehphon (telegram)" />
 
 			<input class="input input-auth input-miel" type="text" name="log-miel" value="" placeholder="miel" />
-			<input class="btn btn-auth" type="submit" name="log-submit" value="">
+			<a href="#loggin" class="btn btn-auth" title="log-submit" >
+				<i class="fa fa-chevron-circle-right"></i>
+			</a>
 		</form><!-- #auth-form -->
 	</header><!-- #main-header -->

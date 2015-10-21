@@ -29,3 +29,28 @@
 	margin-left: 1.1rem;
 	margin-right: 1.1rem;
 }
+
+#auth-form{
+	width: 55rem;
+	float: right;
+	margin-top: 0.5rem;
+	color: $auth-btn-color;
+	.insc-only{
+		display: none;
+	}
+
+	.input-miel{
+		visibility: hidden;
+		width: 0;
+		height: 0;
+	}
+	.btn-auth{
+		width: 2.5rem;
+		height: 2rem;
+		padding: 0;
+		background-color: $auth-btn-color;
+		border: 0.1rem solid $auth-btn-border;
+		color: $auth-icon-color;
+		line-height: 1.5rem;
+	}
+}
