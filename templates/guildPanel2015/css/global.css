@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Arimo");
 /* line 5, D:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -94,30 +95,49 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 /* line 33, ../sass/header.scss */
 #auth-form {
-  width: 55rem;
+  width: 50rem;
   float: right;
   margin-top: 0.5rem;
   color: white;
+  overflow: hidden;
 }
-/* line 38, ../sass/header.scss */
+/* line 39, ../sass/header.scss */
 #auth-form .insc-only {
   display: none;
 }
-/* line 42, ../sass/header.scss */
-#auth-form .input-miel {
+/* line 43, ../sass/header.scss */
+#auth-form span {
+  position: relative;
+  display: block;
+  float: left;
+}
+/* line 49, ../sass/header.scss */
+#auth-form .input-miel, #auth-form .insc-only {
   visibility: hidden;
   width: 0;
   height: 0;
 }
-/* line 47, ../sass/header.scss */
+/* line 54, ../sass/header.scss */
+#auth-form .input-auth {
+  position: relative;
+  width: 12rem;
+  display: block;
+  float: left;
+  margin-left: 0.5rem;
+}
+/* line 62, ../sass/header.scss */
 #auth-form .btn-auth {
+  display: block;
+  position: absolute;
   width: 2.5rem;
   height: 2rem;
   padding: 0;
   background-color: white;
   border: 0.1rem solid silver;
   color: silver;
-  line-height: 1.5rem;
+  line-height: 1.9rem;
+  margin-left: 0.5rem;
+  right: 0;
 }
 
 /* line 4, ../sass/footer.scss */
@@ -253,22 +273,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   z-index: 2;
 }
 
-/* line 8, ../sass/global.scss */
+/* line 9, ../sass/global.scss */
 html {
   font-size: 10px;
   width: 100%;
   min-width: 30rem;
   overflow-x: hidden;
+  font-family: Arimo;
 }
 
-/* line 15, ../sass/global.scss */
+/* line 17, ../sass/global.scss */
 *,
 *:before,
 *:after {
   box-sizing: border-box;
 }
 
-/* line 21, ../sass/global.scss */
+/* line 23, ../sass/global.scss */
 #page,
 #main {
   position: relative;
@@ -276,18 +297,19 @@ html {
   min-height: 100vh;
   font-size: 1.6rem;
   background-color: #D6DEE3;
+  font-family: Arimo;
   overflow: hidden;
   *zoom: 1;
 }
 
-/* line 31, ../sass/global.scss */
+/* line 34, ../sass/global.scss */
 #main {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
   padding-top: 2.5rem;
 }
 
-/* line 38, ../sass/global.scss */
+/* line 41, ../sass/global.scss */
 .img-responcive {
   width: auto;
   height: auto;

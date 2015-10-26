@@ -29,28 +29,47 @@
 
 /* line 33, ../sass/header.scss */
 #auth-form {
-  width: 55rem;
+  width: 50rem;
   float: right;
   margin-top: 0.5rem;
   color: white;
+  overflow: hidden;
 }
-/* line 38, ../sass/header.scss */
+/* line 39, ../sass/header.scss */
 #auth-form .insc-only {
   display: none;
 }
-/* line 42, ../sass/header.scss */
-#auth-form .input-miel {
+/* line 43, ../sass/header.scss */
+#auth-form span {
+  position: relative;
+  display: block;
+  float: left;
+}
+/* line 49, ../sass/header.scss */
+#auth-form .input-miel, #auth-form .insc-only {
   visibility: hidden;
   width: 0;
   height: 0;
 }
-/* line 47, ../sass/header.scss */
+/* line 54, ../sass/header.scss */
+#auth-form .input-auth {
+  position: relative;
+  width: 12rem;
+  display: block;
+  float: left;
+  margin-left: 0.5rem;
+}
+/* line 62, ../sass/header.scss */
 #auth-form .btn-auth {
+  display: block;
+  position: absolute;
   width: 2.5rem;
   height: 2rem;
   padding: 0;
   background-color: white;
   border: 0.1rem solid silver;
   color: silver;
-  line-height: 1.5rem;
+  line-height: 1.9rem;
+  margin-left: 0.5rem;
+  right: 0;
 }
