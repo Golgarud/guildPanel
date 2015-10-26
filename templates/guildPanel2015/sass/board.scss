@@ -13,10 +13,10 @@
 	float: left;
 	margin:-0.5rem;
 	z-index: 0;
-	background:$info;
+	background:$info-color;
 	//events
 	&:hover {
-		border: 1px dotted grey;
+		border: 1px dotted transparent;
 		.module-content {
 			padding: 1.9rem;
 		}
@@ -27,8 +27,7 @@
 	}
 	//module sizer
 	&.module-disclaimer {
-		//
-		background:$danger;
+		background:$danger-color;
 	}
 	&.module-icon {
 		background: none;
@@ -65,7 +64,6 @@
 		left: 0;
 		min-width: 5rem;
 		display: none;
-		background-color: lightgrey;
 		.fa-arrows,
 		.fa-thumb-tack {
 			display: none;
