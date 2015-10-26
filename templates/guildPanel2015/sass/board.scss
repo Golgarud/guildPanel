@@ -11,10 +11,15 @@
 	width: 10rem;
 	height: 10rem;
 	float: left;
+	margin:-0.5rem;
 	z-index: 0;
-	background: $darker-color;
+	background:$info;
 	//events
 	&:hover {
+		border: 1px dotted grey;
+		.module-content {
+			padding: 1.9rem;
+		}
 		.module-option {
 			display: block;
 			z-index: 20;
@@ -22,7 +27,8 @@
 	}
 	//module sizer
 	&.module-disclaimer {
-		background: red;
+		//
+		background:$danger;
 	}
 	&.module-icon {
 		background: none;
@@ -47,7 +53,7 @@
 	}
 	//inside module element
 	.module-content {
-		padding: 0.5rem;
+		padding: 2rem;
 		height: 100%;
 		width: 100%;
 		display: block;
@@ -55,13 +61,14 @@
 	}
 	.module-option {
 		position: absolute;
-		top: -1.7rem;
+		top: 0rem;
 		left: 0;
 		min-width: 5rem;
 		display: none;
 		background-color: lightgrey;
-		.fa-arrows {
-			display:none;
+		.fa-arrows,
+		.fa-thumb-tack {
+			display: none;
 		}
 	}
 }
