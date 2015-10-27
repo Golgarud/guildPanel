@@ -1,0 +1,110 @@
+.both{
+	clear: both;
+	@clearfix();
+}
+.block{
+	position: relative;
+	display: block;
+}
+.absolute-block{
+	position: absolute;
+	display: block;
+	float: none;
+}
+.fixed-block{
+	position: fixed;
+	display: block;
+	float: none;
+}
+.table-block{
+	position: relative;
+	display: table;
+}
+.left-block{
+	@extend .block;
+	float: left;
+}
+.right-block{
+	@extend .block;
+	float: left;
+}
+.break-block{
+	@extend .block;
+	@extend .both;
+}
+.auto-block{
+	@extend .break-block;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+.auto-abs-block{
+	@extend .absolute-block;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+}
+.ninja-block{
+	@extend .block;
+	height: 0rem;
+	width: 0rem;
+	visibility: hidden;
+	overflow: hidden;
+}
+.full-bg{
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.full-fixed-bg{
+	@extend .full-bg;
+	background-attachment: fixed;
+}
+.container{
+	@extend .auto-block;
+	max-width: 128rem;
+	width: 100%;
+}
+.img-responsive{
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+html {
+	font-size: 10px; //INIT REM DO NOT REMOVE!
+	width: 100%;
+	min-width: 30rem;
+	overflow-x: hidden;
+	font-family: Arimo;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+#page,
+#main {
+	@extend .block;
+	min-height: 100vh;
+	font-size: 1.6rem;
+	background-color: $main-color;
+	font-family: Arimo;
+	@include clearfix;
+}
+
+#main {
+	padding-left: 2.5rem;
+	padding-right: 2.5rem;
+	padding-top:2.5rem;
+
+}

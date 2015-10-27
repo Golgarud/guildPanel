@@ -1,0 +1,37 @@
+// pallette de couleur 
+$CWhite			: white;
+$CSilver		: silver;
+$CGrey1			: #D6DEE3;
+$CGrey2			: #4E5050;
+$CGrey3			: #282A2A;
+$CGrey4			: #303030;
+$CGrey5			: #101010;
+
+
+// globa color
+$main-color		: $CGrey1;
+$lighter-color	: $CGrey4;
+$darker-color	: $CGrey5;
+
+//Gradient menu variable
+$MenuColor1		: $CGrey2;
+$MenuColor2		: $CGrey3;
+$MenuColor3		: $CGrey3;
+$MenuColor4		: $CGrey2;
+
+//font color
+$fCBase			: $CGrey4;
+$fCConten		: $CGrey5;
+$fCMenu			: $CGrey4;
+
+// btn color
+$auth-btn-color	: $CWhite;
+$auth-btn-border: $CSilver;
+$auth-icon-color: $CSilver;
+
+//contextual color
+$primary: #337ab7;
+$success:#dff0d8;
+$info:#d9edf7;
+$warning:#fcf8e3;
+$danger:#f2dede;

@@ -1,10 +1,5 @@
-@import "compass";
-@import "var";
-
-/*clearfix*/
-
 .board:after {
-	@include clearfix;
+	@extend .both;
 }
 
 .module {

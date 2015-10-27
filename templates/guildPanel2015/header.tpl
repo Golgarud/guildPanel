@@ -6,12 +6,12 @@
 	<title>guildPanel</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" >
-	<link rel="stylesheet" href="{$dir.css}/global.css">
+	<link rel="stylesheet" href="{$dir.css}/guildPanel.css">
 </head>
 <body>
 <div id="page">
 	<header id="main-header" class="header">
-		<img src="{$dir.img}/logoTemp.png" id="main-logo" class="logo img-responcive" alt="logo temporaire guildPanel" />
+		<img src="{$dir.img}/logoTemp.png" id="main-logo" class="logo img-responsive" alt="logo temporaire guildPanel" />
 		<h1>guildPanel</h1>
 		<form method="get" id="auth-form" accept-charset="utf-8">
 			<input class="input input-auth" requierd type="text" name="log-pseudo" value="" placeholder="pseudo" />
