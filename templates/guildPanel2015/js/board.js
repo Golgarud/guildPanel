@@ -29,4 +29,6 @@ $(document).ready(function () {
 		$(this).hide();
 		$(this).parent().children('.fa-thumb-tack').show();
 	});
+
+	 
 });

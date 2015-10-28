@@ -40,5 +40,15 @@
 				<i class="fa fa-arrows"></i>
 			</div>
 		</div>
+		<div class="module module-4h module-4w">
+			<div class="module-content">
+				<iframe width="500" height="500" src="http://127.0.0.1/www/guildPanel/modules/webogramApp/index.html" ></iframe>
+			</div>
+			<div class="module-option">
+				<i class="fa fa-close"></i>
+				<i class="fa fa-thumb-tack"></i>
+				<i class="fa fa-arrows"></i>
+			</div>
+		</div>
 	</div>
 </main>

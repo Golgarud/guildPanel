@@ -1,0 +1,80 @@
+<div class="im_message_outer_wrap" ng-click="toggleMessage(historyMessage.mid, $event)">
+
+
+  <div class="im_message_wrap clearfix" ng-switch="::historyMessage._ == 'messageService'">
+
+    <div class="im_service_message_wrap" ng-switch-when="true" ng-switch="historyMessage.action._ == 'messageActionBotIntro'">
+      <div ng-switch-when="true" class="im_bot_intro_message_wrap">
+        <div class="im_bot_intro_message_header" my-i18n="message_service_bot_intro_header"></div>
+        <div class="im_bot_intro_message" ng-bind-html="::historyMessage.action.rDescription"></div>
+      </div>
+      <div ng-switch-default class="im_service_message">
+        <a class="im_message_author" ng-if="::historyMessage.fromID > 0" my-peer-link="historyMessage.fromID" short="historyMessage.toID > 0" color="historyMessage.toID < 0" no-watch="true"></a>
+        <span class="im_message_service" my-service-message></span>
+      </div>
+
+      <a ng-if="::historyMessage.action._ == 'messageActionChatEditPhoto' || historyMessage.action._ == 'messageActionChannelEditPhoto'" class="im_service_message_photo_thumb" href="" ng-click="openPhoto(historyMessage.action.photo.id)">
+        <img
+          class="im_service_message_photo_thumb"
+          my-load-thumb
+          thumb="historyMessage.action.photo.thumb"
+        />
+      </a>
+
+    </div>
+
+    <div ng-switch-default class="im_content_message_wrap" ng-class="::[historyMessage.out ? 'im_message_out' : 'im_message_in', historyMessage.fwdFromID ? 'im_message_fwd' : '']">
+
+      <a class="im_message_from_photo pull-left" my-peer-photolink="::historyMessage.fromID" img-class="im_message_from_photo"></a>
+
+      <div class="im_message_meta">
+        <div class="im_message_views_wrap" ng-if="::historyMessage.views > 0">
+          <div class="im_message_views">
+            <i class="icon-message-views"></i><span class="im_message_views_cnt" my-message-views="historyMessage.mid"></span>
+          </div>
+        </div>
+        <a class="im_message_error_btn" ng-if="::historyMessage.pending || historyMessage.error || false" ng-click="historyMessage.send()">
+          <i class="icon-message-status" tooltip="Try again"></i>
+        </a>
+        <i ng-if="::historyMessage.unread &amp;&amp; historyMessage.out || historyMessage.pending || false" class="icon-message-status" ng-show="!historyMessage.error"></i>
+        <span class="im_message_date" ng-bind="::historyMessage.date | time"></span>
+      </div>
+
+      <div class="im_message_body" ng-class="::{im_message_body_media: historyMessage._ == 'message' &amp;&amp; historyMessage.media && !historyMessage.media.rCaption ? true : false}">
+
+        <a class="im_message_author" my-peer-link="historyMessage.fromID" short="historyMessage.toID > 0" color="historyMessage.toID < 0" no-watch="true"></a>
+
+        <a class="im_message_reply_wrap" my-reply-message="historyMessage.reply_to_msg" ng-if="::historyMessage.reply_to_mid"></a>
+
+        <div ng-if="::!!historyMessage.fwdFromID &amp;&amp; !historyMessage.media" class="im_message_fwd_header" my-i18n="message_forwarded_message_mobile">
+          <a my-i18n-param="from" class="im_message_fwd_author" my-peer-link="historyMessage.fwdFromID" no-watch="true"></a>
+          <span my-i18n-param="date" class="im_message_fwd_date" ng-bind="::historyMessage.fwd_date | dateOrTime"></span>
+        </div>
+
+        <div ng-if="::historyMessage.media || historyMessage.mid < 0 ? true : false" class="im_message_media" ng-switch="historyMessage.media._">
+
+          <div ng-switch-when="messageMediaPhoto"     my-message-photo="historyMessage.media" message-id="historyMessage.mid"></div>
+          <div ng-switch-when="messageMediaVideo"     my-message-video="historyMessage.media" message-id="historyMessage.mid"></div>
+          <div ng-switch-when="messageMediaDocument"  my-message-document="historyMessage.media.document" message-id="historyMessage.mid"></div>
+          <div ng-switch-when="messageMediaAudio"     class="im_message_audio" my-audio-player audio="historyMessage.media.audio" message="historyMessage"></div>
+          <div ng-switch-when="messageMediaGeo"       my-message-geo="historyMessage.media"></div>
+          <div ng-switch-when="messageMediaVenue"     my-message-venue="historyMessage.media"></div>
+          <div ng-switch-when="messageMediaContact"   class="im_message_contact" my-message-contact></div>
+          <div ng-switch-when="messageMediaWebPage"   class="im_message_webpage" my-message-webpage="historyMessage.media.webpage" message-id="historyMessage.mid"></div>
+          <div ng-switch-when="messageMediaPending"   my-message-pending></div>
+          <div ng-switch-when="messageMediaUnsupported">
+            <div class="im_message_text">
+              The message is not supported on your version of Telegram Web. Update the app to view: <a href="https://web.telegram.org">web.telegram.org</a>.
+            </div>
+          </div>
+
+        </div>
+
+        <div class="im_message_text" ng-if="::historyMessage.message.length || false" my-message-text="::historyMessage" dir="auto"></div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
