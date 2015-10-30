@@ -33,7 +33,9 @@
 			</div>
 		</div>
 		<div class="module module-3w">
-			<div class="module-content">Module3w</div>
+			<div class="module-content">Module3w
+				<iframe src="https://duckduckgo.com/search.html?prefill=Search DuckDuckGo" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+			</div>
 			<div class="module-option">
 				<i class="fa fa-close"></i>
 				<i class="fa fa-thumb-tack"></i>
