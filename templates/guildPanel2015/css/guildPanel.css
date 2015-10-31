@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Arimo");
-/* line 5, D:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -21,45 +21,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, D:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, D:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, D:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, D:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, D:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, D:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, D:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, D:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -291,6 +291,8 @@ html {
 #main-toolbar li {
   width: 6rem;
   height: 6rem;
+  margin-top: 1rem;
+  padding: 1rem;
   color: white;
   list-style-type: none;
   cursor: pointer;
@@ -311,95 +313,223 @@ html {
   z-index: 0;
   background: #d9edf7;
 }
-/* line 13, ../sass/_board.scss */
-.module:hover {
-  border: 1px dotted grey;
-}
-/* line 15, ../sass/_board.scss */
+/* line 14, ../sass/_board.scss */
 .module:hover .module-content {
-  padding: 1.9rem;
+  padding-top: 1.7rem;
 }
-/* line 18, ../sass/_board.scss */
+/* line 17, ../sass/_board.scss */
 .module:hover .module-option {
   display: block;
   z-index: 20;
 }
-/* line 24, ../sass/_board.scss */
+/* line 23, ../sass/_board.scss */
 .module.module-disclaimer {
   background: #f2dede;
 }
-/* line 28, ../sass/_board.scss */
+/* line 27, ../sass/_board.scss */
 .module.module-icon {
   background: none;
 }
-/* line 31, ../sass/_board.scss */
+/* line 30, ../sass/_board.scss */
 .module.module-2w {
   width: 20rem;
 }
-/* line 34, ../sass/_board.scss */
+/* line 33, ../sass/_board.scss */
 .module.module-3w {
   width: 30rem;
 }
-/* line 37, ../sass/_board.scss */
+/* line 36, ../sass/_board.scss */
 .module.module-4w {
   width: 40rem;
 }
-/* line 40, ../sass/_board.scss */
+/* line 39, ../sass/_board.scss */
+.module.module-5w {
+  width: 50rem;
+}
+/* line 42, ../sass/_board.scss */
+.module.module-6w {
+  width: 60rem;
+}
+/* line 45, ../sass/_board.scss */
 .module.module-2h {
   height: 20rem;
 }
-/* line 43, ../sass/_board.scss */
+/* line 48, ../sass/_board.scss */
 .module.module-3h {
   height: 30rem;
 }
-/* line 46, ../sass/_board.scss */
+/* line 51, ../sass/_board.scss */
 .module.module-4h {
   height: 40rem;
 }
-/* line 50, ../sass/_board.scss */
+/* line 54, ../sass/_board.scss */
+.module.module-5h {
+  height: 50rem;
+}
+/* line 57, ../sass/_board.scss */
+.module.module-6h {
+  height: 60rem;
+}
+/* line 60, ../sass/_board.scss */
+.module.module-4h {
+  height: 40rem;
+}
+/* line 64, ../sass/_board.scss */
 .module .module-content {
-  padding: 2rem;
+  padding-top: 1.7rem;
   height: 100%;
   width: 100%;
   display: block;
   float: left;
 }
-/* line 57, ../sass/_board.scss */
+/* line 71, ../sass/_board.scss */
 .module .module-option {
   position: absolute;
   top: 0rem;
   left: 0;
-  min-width: 5rem;
+  width: 100%;
   display: none;
   background-color: lightgrey;
 }
-/* line 64, ../sass/_board.scss */
+/* line 78, ../sass/_board.scss */
 .module .module-option .fa-arrows,
 .module .module-option .fa-thumb-tack {
   display: none;
 }
 
-/* line 71, ../sass/_board.scss */
-.module:hover {
-  /*Some cool hover style*/
-}
-
-/* line 75, ../sass/_board.scss */
+/* line 85, ../sass/_board.scss */
 .module2 {
   width: 20rem;
   height: 20rem;
 }
 
-/* line 80, ../sass/_board.scss */
+/* line 90, ../sass/_board.scss */
 .module-little {
   width: 5rem;
   height: 5rem;
 }
 
-/* line 85, ../sass/_board.scss */
+/* line 95, ../sass/_board.scss */
 .module.is-dragging,
 .module.is-positioning-post-drag {
   border-color: white;
   background: #09F;
   z-index: 2;
+}
+
+/* line 105, ../sass/_board.scss */
+.cf:before, .cf:after {
+  content: "";
+  display: table;
+}
+
+/* line 110, ../sass/_board.scss */
+.cf:after {
+  clear: both;
+}
+
+/* line 114, ../sass/_board.scss */
+.cf {
+  zoom: 1;
+}
+
+/* Form wrapper styling */
+/* Form text input */
+/* line 124, ../sass/_board.scss */
+.search-wrapper input {
+  width: 25rem;
+  padding: 1rem 0.5rem;
+  float: left;
+  font: bold 1.5rem 'lucida sans', 'trebuchet MS', 'Tahoma';
+  border: 0;
+  background: #EEE;
+  border-radius: 0.3rem 0 0 0.3rem;
+}
+
+/* line 134, ../sass/_board.scss */
+.search-wrapper input:focus {
+  outline: 0;
+  background: #fff;
+  box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.8) inset;
+}
+
+/* line 140, ../sass/_board.scss */
+.search-wrapper input::-webkit-input-placeholder {
+  color: #999;
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* line 146, ../sass/_board.scss */
+.search-wrapper input:-moz-placeholder {
+  color: #999;
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* line 152, ../sass/_board.scss */
+.search-wrapper input:-ms-input-placeholder {
+  color: #999;
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* Form submit button */
+/* line 159, ../sass/_board.scss */
+.search-wrapper button {
+  overflow: visible;
+  position: relative;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  height: 4rem;
+  width: 15rem;
+  font: bold 1.5rem/4rem 'lucida sans', 'trebuchet MS', 'Tahoma';
+  color: white;
+  text-transform: uppercase;
+  background: #D83C3C;
+  border-radius: 0 0.3rem 0.3rem 0;
+  text-shadow: 0 -0.1rem 0 rgba(0, 0, 0, 0.3);
+}
+
+/* line 175, ../sass/_board.scss */
+.search-wrapper button:hover {
+  background: #e54040;
+}
+
+/* line 179, ../sass/_board.scss */
+.search-wrapper button:active,
+.search-wrapper button:focus {
+  background: #c42f2f;
+  outline: 0;
+}
+
+/* line 185, ../sass/_board.scss */
+.search-wrapper button:before {
+  /* left arrow */
+  content: '';
+  position: absolute;
+  border-width: 0.8rem 0.8rem 0.8rem 0;
+  border-style: solid solid solid none;
+  border-color: transparent #d83c3c transparent;
+  top: 1.2rem;
+  left: -0.6rem;
+}
+
+/* line 195, ../sass/_board.scss */
+.search-wrapper button:hover:before {
+  border-right-color: #e54040;
+}
+
+/* line 199, ../sass/_board.scss */
+.search-wrapper button:focus:before,
+.search-wrapper button:active:before {
+  border-right-color: #c42f2f;
+}
+
+/* line 204, ../sass/_board.scss */
+.search-wrapper button::-moz-focus-inner {
+  /* remove extra button spacing for Mozilla Firefox */
+  border: 0;
+  padding: 0;
 }
