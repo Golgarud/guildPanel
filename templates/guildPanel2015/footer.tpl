@@ -10,6 +10,6 @@
 <script src="{$dir.js}/draggabilly.pkgd.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="{$dir.js}/board.js" type="text/javascript" charset="utf-8"></script>
 <script src="{$dir.js}/hashchange.js" type="text/javascript" charset="utf-8"></script>
-<script src="{$dir.js}/singin.js" type="text/javascript" charset="utf-8"></script>
+<script src="{$dir.js}/signin.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
