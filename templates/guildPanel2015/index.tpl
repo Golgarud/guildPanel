@@ -44,7 +44,7 @@
 		</div>
 		<div class="module module-4h module-4w">
 			<div class="module-content">
-				<iframe width="500" height="500" src="http://localhost:8888/guildPanel/modules/webogram/app/index.html" ></iframe>
+				<iframe width="500" height="500" src="http://127.0.0.1/www/guildPanel/modules/webogram/index.html" ></iframe>
 			</div>
 			<div class="module-option">
 				<i class="fa fa-close"></i>
