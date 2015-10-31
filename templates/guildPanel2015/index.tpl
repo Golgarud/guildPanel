@@ -14,7 +14,7 @@
         </div>
         <div data-linkName="duckduck" class="module module-4w">
             <div class="module-content">
-                <form method="get" id="search" action="http://duckduckgo.com/">
+                <form method="get" id="search" class="search-wrapper cf" target="_blank" action="http://duckduckgo.com/">
                     <input type="hidden" name="sites" value="hardikpandya.com" />
                     <input type="hidden" name="ka" value="h" />
                     <input type="hidden" name="k7" value="#fafafa" />
@@ -22,8 +22,8 @@
                     <input type="hidden" name="ky" value="#fafafa" />
                     <input type="hidden" name="kx" value="b" />
                     <input type="hidden" name="kt" value="Helvetica" />
-                    <input type="text" name="q" maxlength="255" placeholder="Search" />
-                    <input type="submit" value="DuckDuckGo Search" />
+                    <input type="text" name="q" maxlength="255" placeholder="Rechercher" />
+                    <button type="submit">Vers L'Internet !</button>
                 </form>
             </div>
             <div class="module-option">
