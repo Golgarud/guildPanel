@@ -12,13 +12,18 @@ class ModulesController
 	private $moduleList;
 	private $uninstalledModule;
 	private $instanciedModule;
+	private $hookList = array( "hookDebug", "hookHead", "hookHeader", "hookContent", "hookMenu", "hookFoot", "hookFooter" );
 	
 	/**
-	 * __construct
-	 *
-	 * @param smarty (obj), db (obj), uninstalledModule (array), moduleList (array)
+	 * __construct moduleController
+	 * @author Golga
+	 * @version 0.1
+	 * @param	object		$smarty
+	 * @param	object		$db
+	 * @param	array		$moduleList
+	 * @param	array		$uninstalledModule
 	 * @return boolean
-	*/
+	 */
 	public function __construct( $smarty, $db, $moduleList = null, $uninstalledModule = null )
 	{
 		if ($moduleList == null )
@@ -47,7 +52,8 @@ class ModulesController
 	/**
 	 * instanceModuleList
 	 *
-	 * @param none
+	 * @author Golga
+	 * @version 0.1
 	 * @return boolean
 	*/
 	public function instanceModuleList( )
@@ -79,7 +85,8 @@ class ModulesController
 	/**
 	 * getModuleList
 	 *
-	 * @param none
+	 * @author Golga
+	 * @version 0.1
 	 * @return $moduleList (array)
 	*/
 	public function getModuleList( )
@@ -88,8 +95,45 @@ class ModulesController
 	}
 
 	/**
+	 * runHook
+	 *
+	 * @author  Golga
+	 * @param   string		$hookName
+	 * @version 0.1
+	 * @return  boolean
+	*/
+	public function runHook( $hookName )
+	{
+		$moduleList = $this->instanciedModule;
+		$hookList = $this->hookList;
+		if ( in_array( $hookName, $hookList ) && !empty($moduleList) )
+		{
+			foreach ($moduleList as $key => $module)
+			{
+				if (
+						method_exists ( $module, $hookName )
+					&&	!$module->getIsAdmin()
+					&&	$module->getIsActive()
+					&&	!$module->getNeedLogin()
+					)
+				{
+					$module->$hookName();
+					$module->test();
+				}
+				else{
+					echo "nope";
+				}
+			}
+			return true;
+		}
+		return false;
+	}
+
+	/**
 	 * setModuleList
 	 *
+	 * @author Golga
+	 * @version 0.1
 	 * @param moduleList (array)
 	 * @return boolean
 	*/
@@ -102,6 +146,8 @@ class ModulesController
 	/**
 	 * __destruct
 	 *
+	 * @author Golga
+	 * @version 0.1
 	 * @param none
 	 * @return boolean
 	*/

@@ -4,7 +4,7 @@ require_once(CLASS_DIR."/ModuleController.php");
 $db = null;
 $modulesController = new ModulesController( $smarty, $db );
 $modulesController->instanceModuleList();
-die();
+$modulesController->runHook( "hookDebug" );
 $smarty->display('header.tpl');
 $smarty->display('toolbar.tpl');
 $smarty->display('index.tpl');
