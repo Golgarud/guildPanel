@@ -7,7 +7,7 @@
  */
 class Module
 {
-	private $smarty;
+	public $smarty;
 	private $db;
 	private $isAdmin = false;
 	private $isActive = false;
@@ -25,7 +25,7 @@ class Module
 	}
 
 	/**
-	 * __construct constructor of Module class
+	 * parentInit constructor of Module class
 	 *
 	 * @author Golga
 	 * @version 0.1
@@ -33,8 +33,10 @@ class Module
 	 * @param   obj        $db     global sql object
 	 * @return  boolean
 	 */
-	public function __construct( $smarty, $db )
+	public function parentInit( $smarty, $db )
 	{
+		echo "string";
+		echo $smarty;
 		$thit->smarty = $smarty;
 		$thit->db = $db;
 		return true; 
@@ -47,7 +49,7 @@ class Module
 	 * @version 0.1
 	 * @return boolean
 	 */
-	public function __destruct()
+	protected function __destruct()
 	{
 		unset($this->db);
 		unset($this->smarty);

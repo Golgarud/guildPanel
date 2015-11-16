@@ -68,9 +68,13 @@ class ModulesController
 			if( file_exists ( $moddPath ) )
 			{
 				include "./modules/" . $modd . "/" . $moddClassName . ".php";
-				if ( !$instanciedModule[$moddClassName] = new $moddClassName( $this->smarty, $this->db ) )
+				if ( !$instanciedModule[$moddClassName] = new $moddClassName() )
 				{
 					die("Error: le module " . $moddClassName . " n'a pas pue etres instancier.");
+				}
+				else
+				{
+					$instanciedModule[$moddClassName]->parentInit( "plop", "db" );
 				}
 			}
 			else
@@ -117,11 +121,11 @@ class ModulesController
 					&&	!$module->getNeedLogin()
 					)
 				{
+					$module->parentInit("plp", "plp");
 					$module->$hookName();
-					$module->test();
 				}
 				else{
-					echo "nope";
+					return false;
 				}
 			}
 			return true;
