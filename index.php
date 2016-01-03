@@ -7,7 +7,7 @@ $ModulesController->instanceModuleList();
 $hookData = $ModulesController->catchAllHook();
 
 $FrontController = new FrontController(  $smarty, $db, $templateList, $hookData );
-$FrontController->catchGlobData( $_GET["debug"] );
+$FrontController->catchGlobData();
 $FrontController->displayTpl();
 
 

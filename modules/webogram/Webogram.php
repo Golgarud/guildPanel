@@ -12,15 +12,20 @@ class Webogram extends Module
 	public function __construct()
 	{
 		$this->setIsActive( 1 );
-	}
-
-	public function test(){
-
-		print_r($this->smarty);
+		print_r($this);
 	}
 
 	public function hookDebug()
 	{
-		echo "string";
+		return print_r($this, 1);
+	}
+
+	public function hookContent()
+	{
+		return array(
+			'content' => 'test',
+			'class' => 'test',
+			'option' => 'test',
+		);
 	}
 }

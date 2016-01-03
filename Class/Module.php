@@ -47,6 +47,20 @@ class Module extends Controller
 	}
 
 	/**
+	 * Init Controller object
+	 * @param object		$smarty
+	 * @param object		$db
+	 * @return boolean
+	 * @author Golga
+	 * @since 0.3
+	 */
+	public function init($smarty, $db)
+	{
+		parent::__construct( $smarty, $db );
+		return true;
+	}
+
+	/**
 	 * getIsAdmin
 	 * 
 	 * @author Golga

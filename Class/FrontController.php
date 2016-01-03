@@ -14,9 +14,9 @@ class FrontController extends Controller
 	 * __construct moduleController
 	 * @author Golga
 	 * @since 0.2
-	 * @param	array		$templateList
-	 * @param	array		$hookData
-	 * @return	boolean
+	 * @param array		$templateList
+	 * @param array		$hookData
+	 * @return boolean
 	 */
 	public function __construct( $smarty, $db, $templateList = null, $hookData = null )
 	{
@@ -47,9 +47,9 @@ class FrontController extends Controller
 	 * catchGlobData
 	 * @author Golga
 	 * @since 0.2
-	 * @param	array		$templateList
-	 * @param	array		$hookData
-	 * @return	boolean
+	 * @param array		$templateList
+	 * @param array		$hookData
+	 * @return boolean
 	 */
 	public function catchGlobData( $debug = false )
 	{
@@ -70,6 +70,7 @@ class FrontController extends Controller
 		else
 		{
 			$this->smartyAssign( $glob );
+			var_dump($this->hookData);
 			$this->smartyAssign( $this->hookData );
 		}
 	}
@@ -78,7 +79,7 @@ class FrontController extends Controller
 	 * displayTpl
 	 * @author Golga
 	 * @since 0.2
-	 * @return	boolean
+	 * @return boolean
 	 */
 	public function displayTpl()
 	{

@@ -1,5 +1,16 @@
 <main class="main" id="main">
 	<div id="main-board" class="board">
+		{foreach $hookContent as $module => $key}
+			<div data-linkName="{$module.linkName}" class="module {$module.class}">
+				<div class="module-content">{$module.content}</div>
+				<div class="module-option">
+					{$module.option}
+					<i class="fa fa-close"></i>
+					<i class="fa fa-thumb-tack"></i>
+					<i class="fa fa-arrows"></i>
+				</div>
+			</div>
+		{/foreach}
 		<div data-linkName="disclaimer" class="module module-disclaimer">
 			<div class="module-content">
 				<h2>Site preview !</h2>

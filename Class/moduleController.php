@@ -16,9 +16,9 @@ class ModulesController extends Controller
 	 * __construct moduleController
 	 * @author Golga
 	 * @since 0.2
-	 * @param	array		$moduleList
-	 * @param	array		$uninstalledModule
-	 * @return	boolean
+	 * @param array		$moduleList
+	 * @param array		$uninstalledModule
+	 * @return boolean
 	 */
 	public function __construct( $smarty, $db, $moduleList = null, $uninstalledModule = null )
 	{
@@ -70,6 +70,10 @@ class ModulesController extends Controller
 				{
 					die("Error: le module " . $moddClassName . " n'a pas pue etres instancier.");
 				}
+				else
+				{
+					$instanciedModule[$moddClassName]->init( $this->smarty, $this->db );
+				}
 			}
 			else
 			{
@@ -104,7 +108,7 @@ class ModulesController extends Controller
 	{
 		$moduleList = $this->instanciedModule;
 		$hookList = $this->hookList;
-		$moduleData = "";
+		$moduleData = array();
 		if ( in_array( $hookName, $hookList ) && !empty($moduleList) )
 		{
 			foreach ($moduleList as $key => $module)
@@ -116,7 +120,9 @@ class ModulesController extends Controller
 					&&	!$module->getNeedLogin()
 					)
 				{
-					$moduleData .=$module->$hookName();
+					print_r($module);
+					die();
+					$moduleData[ $module ] = $module->$hookName();
 				}
 			}
 			return $moduleData;
