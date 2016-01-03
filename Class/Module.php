@@ -5,10 +5,8 @@
  * @package GuildPanel
  * @subpackage class
  */
-class Module
+class Module extends Controller
 {
-	public $smarty;
-	private $db;
 	private $isAdmin = false;
 	private $isActive = false;
 	private $needLogin = false;
@@ -17,28 +15,22 @@ class Module
 	 * hookDebug debuging defalut method
 	 * This is a cool function
 	 * @author Golga
-	 * @version 0.1
+	 * @since 0.2
 	 */
 	public function hookDebug()
 	{
-		print_r($this);
+		return print_r($this, 1);
 	}
 
 	/**
-	 * parentInit constructor of Module class
+	 * __construct constructor of Module class
 	 *
 	 * @author Golga
-	 * @version 0.1
-	 * @param   obj        $smarty global smarty object
-	 * @param   obj        $db     global sql object
+	 * @since 0.1
 	 * @return  boolean
 	 */
-	public function parentInit( $smarty, $db )
+	public function __construct(  )
 	{
-		echo "string";
-		echo $smarty;
-		$thit->smarty = $smarty;
-		$thit->db = $db;
 		return true; 
 	}
 
@@ -46,21 +38,33 @@ class Module
 	 * __destruct destructor of Module class
 	 * 
 	 * @author Golga
-	 * @version 0.1
+	 * @since 0.1
 	 * @return boolean
 	 */
-	protected function __destruct()
+	public function __destruct()
 	{
-		unset($this->db);
-		unset($this->smarty);
 		return true; 
+	}
+
+	/**
+	 * Init Controller object
+	 * @param object		$smarty
+	 * @param object		$db
+	 * @return boolean
+	 * @author Golga
+	 * @since 0.3
+	 */
+	public function init($smarty, $db)
+	{
+		parent::__construct( $smarty, $db );
+		return true;
 	}
 
 	/**
 	 * getIsAdmin
 	 * 
 	 * @author Golga
-	 * @version 0.1
+	 * @since 0.1
 	 * @return boolean
 	 */
 	public function getIsAdmin()
@@ -72,7 +76,7 @@ class Module
 	 * getIsActive
 	 * 
 	 * @author Golga
-	 * @version 0.1
+	 * @since 0.1
 	 * @return boolean
 	 */
 	public function getIsActive()
@@ -84,7 +88,7 @@ class Module
 	 * getNeedLogin
 	 * 
 	 * @author Golga
-	 * @version 0.1
+	 * @since 0.1
 	 * @return boolean
 	 */
 	public function getNeedLogin()
@@ -96,7 +100,7 @@ class Module
 	 * setIsAdmin
 	 * 
 	 * @author Golga
-	 * @version 0.1
+	 * @since 0.1
 	 * @return boolean
 	 */
 	public function setIsAdmin( $val )
@@ -109,7 +113,7 @@ class Module
 	 * setIsActive
 	 * 
 	 * @author Golga
-	 * @version 0.1
+	 * @since 0.1
 	 * @return boolean
 	 */
 	public function setIsActive( $val )
@@ -122,7 +126,7 @@ class Module
 	 * setNeedLogin
 	 * 
 	 * @author Golga
-	 * @version 0.1
+	 * @since 0.1
 	 * @return boolean
 	 */
 	public function setNeedLogin( $val )

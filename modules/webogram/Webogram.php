@@ -7,18 +7,25 @@
  */
 class Webogram extends Module
 {
-	// protected $smarty;
+	protected $isActive = true;
+
 	public function __construct()
 	{
 		$this->setIsActive( 1 );
+		print_r($this);
 	}
-
 
 	public function hookDebug()
 	{
-		print_r($this);
-		echo "<hr />";
-		echo $this->smarty;
-		// return $this->smarty->fetch('index.tpl', "116rd");
+		return print_r($this, 1);
+	}
+
+	public function hookContent()
+	{
+		return array(
+			'content' => 'test',
+			'class' => 'test',
+			'option' => 'test',
+		);
 	}
 }
