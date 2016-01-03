@@ -1,17 +1,25 @@
 <main class="main" id="main">
 	<div id="main-board" class="board">
-		{foreach $hookContent as $module => $key}
-			<div data-linkName="{$module.linkName}" class="module {$module.class}">
-				<div class="module-content">{$module.content}</div>
-				<div class="module-option">
-					{$module.option}
-					<i class="fa fa-close"></i>
-					<i class="fa fa-thumb-tack"></i>
-					<i class="fa fa-arrows"></i>
+		{foreach $hookContent as $key => $module}
+			{if is_array($module)}
+				<div data-linkName="{if isset($module.linkName)}{$module.linkName}{/if}" class="module {if isset($module.class)}{$module.class}{/if}">
+					<div class="module-content">{$module.content}</div>
+					<div class="module-option">
+						{if $module.option}
+						<i class="fa fa-close"></i>
+						<i class="fa fa-thumb-tack"></i>
+						<i class="fa fa-arrows"></i>
+							{if isset($module.otherOption)}
+								{$module.otherOption}
+							{/if}
+						{/if}
+					</div>
 				</div>
-			</div>
+			{else}
+				{$module}
+			{/if}
 		{/foreach}
-		<div data-linkName="disclaimer" class="module module-disclaimer">
+		<!-- <div data-linkName="disclaimer" class="module module-disclaimer">
 			<div class="module-content">
 				<h2>Site preview !</h2>
 				<p>C'est encore la version test de GuildPanel</p>
@@ -47,16 +55,6 @@
 				<i class="fa fa-arrows"></i>
 			</div>
 		</div>
-		<div class="module module-4h module-4w">
-			<div class="module-content">
-				<iframe width="400" height="400" src="http://127.0.0.1/guildPanel/modules/webogram/index.html" ></iframe>
-			</div>
-			<div class="module-option">
-				<i class="fa fa-close"></i>
-				<i class="fa fa-thumb-tack"></i>
-				<i class="fa fa-arrows"></i>
-			</div>
-		</div>
 		<div data-linkName="duckduck" class="module module-4w">
 			<div class="module-content">
 				<form method="get" id="search" class="search-wrapper cf" target="_blank" action="http://duckduckgo.com/">
@@ -77,7 +75,7 @@
 				<i class="fa fa-arrows"></i>
 			</div>
 		</div>
-
+ -->
 
 		<!--Here you can hook your module board-->
 	</div>

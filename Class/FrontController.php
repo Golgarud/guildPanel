@@ -70,7 +70,6 @@ class FrontController extends Controller
 		else
 		{
 			$this->smartyAssign( $glob );
-			var_dump($this->hookData);
 			$this->smartyAssign( $this->hookData );
 		}
 	}

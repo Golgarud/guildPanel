@@ -118,11 +118,10 @@ class ModulesController extends Controller
 					&&	!$module->getIsAdmin()
 					&&	$module->getIsActive()
 					&&	!$module->getNeedLogin()
+					&&	$module->getModuleName()
 					)
 				{
-					print_r($module);
-					die();
-					$moduleData[ $module ] = $module->$hookName();
+					$moduleData[ $module->getModuleName() ] = $module->$hookName();
 				}
 			}
 			return $moduleData;

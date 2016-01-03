@@ -64,24 +64,24 @@ class Module extends Controller
 	 * getIsAdmin
 	 * 
 	 * @author Golga
-	 * @since 0.1
+	 * @since 0.3
 	 * @return boolean
 	 */
 	public function getIsAdmin()
 	{
-		return $this->isAdmin; 
+		return ( isset($this->isAdmin) ) ? $this->isAdmin : null ;
 	}
 
 	/**
 	 * getIsActive
 	 * 
 	 * @author Golga
-	 * @since 0.1
+	 * @since 0.3
 	 * @return boolean
 	 */
 	public function getIsActive()
-	{
-		return $this->isActive; 
+	{ 
+		return ( isset($this->isActive) ) ? $this->isActive : null ;
 	}
 
 	/**
@@ -93,7 +93,20 @@ class Module extends Controller
 	 */
 	public function getNeedLogin()
 	{
-		return $this->needLogin; 
+		return ( isset($this->needLogin) ) ? $this->needLogin : null ;
+	}
+
+	/**
+	 * getModuleName
+	 *
+	 * @author Golga
+	 * @since 0.3
+	 * @param none
+	 * @return string
+	*/
+	public function getModuleName()
+	{
+		return ( isset($this->moduleName) ) ? $this->moduleName : null ;
 	}
 
 	/**
