@@ -5,10 +5,8 @@
  * @package GuildPanel
  * @subpackage class
  */
-class ModulesController
+class ModulesController extends Controller
 {
-	private $smarty;
-	private $db;
 	private $moduleList;
 	private $uninstalledModule;
 	private $instanciedModule;
@@ -17,15 +15,15 @@ class ModulesController
 	/**
 	 * __construct moduleController
 	 * @author Golga
-	 * @version 0.1
-	 * @param	object		$smarty
-	 * @param	object		$db
+	 * @since 0.2
 	 * @param	array		$moduleList
 	 * @param	array		$uninstalledModule
-	 * @return boolean
+	 * @return	boolean
 	 */
 	public function __construct( $smarty, $db, $moduleList = null, $uninstalledModule = null )
 	{
+		parent::__construct( $smarty, $db );
+
 		if ($moduleList == null )
 		{
 			$files = scandir( MOD_DIR );
@@ -53,7 +51,7 @@ class ModulesController
 	 * instanceModuleList
 	 *
 	 * @author Golga
-	 * @version 0.1
+	 * @since 0.1
 	 * @return boolean
 	*/
 	public function instanceModuleList( )
@@ -86,7 +84,7 @@ class ModulesController
 	 * getModuleList
 	 *
 	 * @author Golga
-	 * @version 0.1
+	 * @since 0.1
 	 * @return $moduleList (array)
 	*/
 	public function getModuleList( )
@@ -97,15 +95,16 @@ class ModulesController
 	/**
 	 * runHook
 	 *
-	 * @author  Golga
-	 * @param   string		$hookName
-	 * @version 0.1
+	 * @author Golga
+	 * @param  string		$hookName
+	 * @since 0.1
 	 * @return  boolean
 	*/
 	public function runHook( $hookName )
 	{
 		$moduleList = $this->instanciedModule;
 		$hookList = $this->hookList;
+		$moduleData = "";
 		if ( in_array( $hookName, $hookList ) && !empty($moduleList) )
 		{
 			foreach ($moduleList as $key => $module)
@@ -117,14 +116,10 @@ class ModulesController
 					&&	!$module->getNeedLogin()
 					)
 				{
-					$module->$hookName();
-					$module->test();
-				}
-				else{
-					echo "nope";
+					$moduleData .=$module->$hookName();
 				}
 			}
-			return true;
+			return $moduleData;
 		}
 		return false;
 	}
@@ -133,7 +128,7 @@ class ModulesController
 	 * setModuleList
 	 *
 	 * @author Golga
-	 * @version 0.1
+	 * @since 0.1
 	 * @param moduleList (array)
 	 * @return boolean
 	*/
@@ -144,15 +139,34 @@ class ModulesController
 	}
 
 	/**
+	 * catchAllHook
+	 *
+	 * @author Golga
+	 * @since 0.2
+	 * @param moduleList (array)
+	 * @return boolean
+	*/
+	public function catchAllHook()
+	{
+		$HookData = array();
+		foreach ($this->hookList as $key => $hookName)
+		{
+			$HookData[$hookName] = $this->runHook( $hookName );
+		}
+		return $HookData;
+	}
+
+	/**
 	 * __destruct
 	 *
 	 * @author Golga
-	 * @version 0.1
+	 * @since 0.1
 	 * @param none
 	 * @return boolean
 	*/
 	public function __destruct()
 	{
+		parent::__destruct();
 		unset($this->moduleList);
 		unset($this->uninstalledModule);
 		return true; 

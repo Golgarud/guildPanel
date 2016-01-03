@@ -13,8 +13,14 @@ class Webogram extends Module
 	{
 		$this->setIsActive( 1 );
 	}
+
 	public function test(){
 
 		print_r($this->smarty);
+	}
+
+	public function hookDebug()
+	{
+		echo "string";
 	}
 }

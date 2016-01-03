@@ -37,11 +37,13 @@ define("CACHE_SMARTY_DIR", CACHE_DIR."/.smarty-cache");
 define("CACHE_SMARTY_COMPILE", CACHE_DIR."/.smarty-compile");
 
 // Templates
+define("TEMPLATE_EXT", rp(".tpl") );
 define("TEMPLATE_DIR", rp("./templates/guildPanel2015") );
 define("IMG_DIR", TEMPLATE_DIR."/img");
 define("JS_DIR", TEMPLATE_DIR."/js");
 define("CSS_DIR", TEMPLATE_DIR."/css");
 define("ADM_DIR", TEMPLATE_DIR."/adm");
+$templateList = array( "header", "toolbar", "index", "footer");
 
 // Modules
 define("MOD_DIR", rp("./modules") );
