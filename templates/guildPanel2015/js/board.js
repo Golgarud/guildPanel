@@ -1,4 +1,5 @@
-$(document).ready(function () {
+$(document).ready(function ()
+{
 	var modWidth = $('#main-board').width() - ($('#main-board').width() % 100);
 	$('.module-disclaimer').width(modWidth);
 	$('#main-board').width(modWidth);
@@ -9,33 +10,57 @@ $(document).ready(function () {
 		gutter:10,
 	});
 
-	board.find('.module').each(function (i, itemElem) {
+	board.find('.module').each(function (i, itemElem)
+	{
 		var draggie = new Draggabilly(itemElem);
 		board.packery('bindDraggabillyEvents', draggie);
 	});
 
-    //options actions (close, pin, ...)
-	$('.module-option .fa-close').on('click',function(){
+	//options actions (close, pin, ...)
+	$('.module-option .fa-close').on('click',function()
+	{
 		$(this).parents('.module').hide();
-        board.packery();
+		board.packery();
 	});
-	$('.module-option .fa-thumb-tack').on('click',function(){
+	$('.module-option .fa-thumb-tack').on('click',function()
+	{
 		$(this).parents('.module').draggabilly('disable');
 		$(this).hide();
 		$(this).parent().children('.fa-arrows').show();
 	});
-	$('.module-option .fa-arrows').on('click',function(){
+	$('.module-option .fa-arrows').on('click',function()
+	{
 		console.log('draggable');
 		$(this).parents('.module').draggabilly('enable');
 		$(this).hide();
 		$(this).parent().children('.fa-thumb-tack').show();
 	});
 
-    //toolbar activate module
-    $('#main-toolbar li').on('click',function(){
-        moduleName = $(this).data('linkname');
-        console.log(moduleName);
-        $('.module[data-linkname='+moduleName+']').show();
-        board.packery();
-    });
+	//toolbar activate module
+	$('#main-toolbar li').on('click',function()
+	{
+		moduleName = $(this).data('linkname');
+		console.log(moduleName);
+		$('.module[data-linkname='+moduleName+']').show();
+		board.packery();
+	});
+
+
+
+	if (window.addEventListener)
+	{
+		window.addEventListener('contextmenu', function(e)
+		{
+			alert("You've tried to open context menu"); //here you draw your own menu
+			e.preventDefault();
+		}, false);
+	}
+	else
+	{
+		window.attachEvent('oncontextmenu', function()
+		{
+			alert("You've tried to open context menu");
+			window.event.returnValue = false;
+		});
+	}
 });
