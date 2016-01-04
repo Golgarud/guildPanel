@@ -11,7 +11,7 @@
 	{foreach $hookMenu as $moduleList}
 		{if is_array($moduleList)}
 		<li data-linkName="{$moduleList.linkName}">
-			<i class="{$moduleList.icoClass}"></i>
+			<i class="{$moduleList.icoClass} fa-fw"></i>
 			{if isset($moduleList.otherOption)}$moduleList.otherOption{/if}
 		</li>
 		{else}
