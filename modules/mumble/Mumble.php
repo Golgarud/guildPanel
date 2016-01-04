@@ -24,8 +24,8 @@ class Mumble extends Module
 	public function hookContent()
 	{
 		return array(
-			'content' => '<iframe src="http://mumbleviewer.gotmumble.com/?id=27411&size=11&font=Verdana&color=000000&bgcolor=FFFFFF" scrolling="vertical" frameborder="0" style="-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;"></iframe>',
-			'class' => 'module-2h module-3w',
+			'content' => '<iframe src="http://mumbleviewer.gotmumble.com/?id=27411&size=11&font=Verdana&color=000000&bgcolor=FFFFFF" scrolling="vertical" frameborder="0" style="min-height:100%"></iframe>',
+			'class' => 'module-3h module-3w',
 			'linkName' => 'mumble',
 			'option' => 1
 		);
