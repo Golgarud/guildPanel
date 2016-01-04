@@ -59,25 +59,25 @@ class ModulesController extends Controller
 		include CLASS_DIR."/module.php";
 		$moduleList = $this->moduleList;
 		$instanciedModule = array();
-		foreach ($moduleList as $k => $modd)
+		foreach ($moduleList as $k => $mod)
 		{
-			$moddClassName = ucfirst( $modd );
-			$moddPath = "./modules/" . $modd . "/" . $moddClassName . ".php";
-			if( file_exists ( $moddPath ) )
+			$modClassName = ucfirst( $mod );
+			$modPath = "./modules/" . $mod . "/" . $modClassName . ".php";
+			if( file_exists ( $modPath ) )
 			{
-				include "./modules/" . $modd . "/" . $moddClassName . ".php";
-				if ( !$instanciedModule[$moddClassName] = new $moddClassName( $this->smarty, $this->db ) )
+				include "./modules/" . $mod . "/" . $modClassName . ".php";
+				if ( !$instanciedModule[$modClassName] = new $modClassName( $this->smarty, $this->db ) )
 				{
-					die("Error: le module " . $moddClassName . " n'a pas pue etres instancier.");
+					die("Error: le module " . $modClassName . " n'a pas pue etres instancier.");
 				}
 				else
 				{
-					$instanciedModule[$moddClassName]->init( $this->smarty, $this->db );
+					$instanciedModule[$modClassName]->init( $this->smarty, $this->db );
 				}
 			}
 			else
 			{
-				die("Error: le module " . $moddClassName . " n'a pas pue etres instancier.");
+				die("Error: le module " . $modClassName . " n'a pas pue etres instancier.");
 			} 
 		}
 		$this->instanciedModule = $instanciedModule;

@@ -23,7 +23,7 @@ function rp( $path )
 }
 
 
-define("CONFF_DIR", rp("./config") );
+define("CONFIG_DIR", rp("./config") );
 
 // class
 define("CLASS_DIR", rp("./Class") );
