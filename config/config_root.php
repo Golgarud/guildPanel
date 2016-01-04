@@ -1,5 +1,5 @@
 <?php
-// conff
+// config
 
 function rp( $path )
 {
@@ -10,7 +10,7 @@ function rp( $path )
 		{
 			continue;
 		}
-		elseif ($fold == '..' && $i > 0 && end($out) != '..') 
+		elseif ($fold == '..' && $i > 0 && end($out) != '..')
 		{
 			array_pop($out);
 		}
@@ -23,7 +23,7 @@ function rp( $path )
 }
 
 
-define("CONFF_DIR", rp("./conff") );
+define("CONFF_DIR", rp("./config") );
 
 // class
 define("CLASS_DIR", rp("./Class") );

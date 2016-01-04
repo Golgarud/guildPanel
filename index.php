@@ -1,5 +1,5 @@
 <?php
-require_once("./conff/conff_include.php");
+require_once("./config/config_include.php");
 $db = null;
 
 $ModulesController = new ModulesController( $smarty, $db );
