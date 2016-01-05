@@ -38,7 +38,7 @@ define("CACHE_SMARTY_COMPILE", CACHE_DIR."/.smarty-compile");
 
 // Templates
 define("TEMPLATE_EXT", rp(".tpl") );
-define("TEMPLATE_DIR", rp("./templates/guildPanel2015") );
+define("TEMPLATE_DIR", rp("./templates/guildPanel2016") );
 define("IMG_DIR", TEMPLATE_DIR."/img");
 define("JS_DIR", TEMPLATE_DIR."/js");
 define("CSS_DIR", TEMPLATE_DIR."/css");

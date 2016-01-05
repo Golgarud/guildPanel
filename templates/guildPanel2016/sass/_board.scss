@@ -1,0 +1,115 @@
+.board:after {
+	@extend .both;
+}
+
+.module {
+	width: 10rem;
+	height: 10rem;
+	float: left;
+	margin: -0.5rem;
+	z-index: 0;
+	background: white;
+	border: 0.2rem solid white;
+	padding-top: 2rem;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		padding-bottom: 1rem;
+	//module sizer
+	&.module-disclaimer {
+		//
+		background: $danger;
+	}
+	&.module-icon {
+		background: none;
+	}
+	&.module-2w {
+		width: 20rem;
+	}
+	&.module-3w {
+		width: 30rem;
+	}
+	&.module-4w {
+		width: 40rem;
+	}
+	&.module-5w {
+		width: 50rem;
+	}
+	&.module-6w {
+		width: 60rem;
+	}
+	&.module-2h {
+		height: 20rem;
+	}
+	&.module-3h {
+		height: 30rem;
+	}
+	&.module-4h {
+		height: 40rem;
+	}
+	&.module-5h {
+		height: 50rem;
+	}
+	&.module-6h {
+		height: 60rem;
+	}
+	&.module-4h {
+		height: 40rem;
+	}
+	//inside module element
+	.module-content {
+		// margin-top: 2rem;
+		// margin-left: 1rem;
+		// margin-right: 1rem;
+		// margin-bottom: 1rem;
+		height: 100%;
+		width: 100%;
+		display: block;
+		float: left;
+		iframe{
+			max-width: 100%;
+		}
+	}
+
+}
+
+.module2 {
+	width: 20rem;
+	height: 20rem;
+}
+
+.module-little {
+	width: 5rem;
+	height: 5rem;
+}
+
+.module.is-dragging,
+.module.is-positioning-post-drag {
+	background: #09F;
+	border-color: white;
+	z-index: 2;
+}
+
+.module-option{
+	display: none;
+	z-index: 99999999999;
+	position: fixed;
+	overflow: hidden;
+	border: 0.1rem solid #CCC;
+	background: #FFF;
+	color: #333;
+	border-radius: 0.5rem;
+	padding: 0;
+	cursor: pointer;
+	li {
+		padding: 0.8rem 1.2rem;
+		cursor: pointer;
+		list-style-type: none;
+		&:hover {
+			background-color: #DEF;
+		}
+		.info{
+			color: #497495;
+			font-size: 1rem;
+		}
+	}
+}

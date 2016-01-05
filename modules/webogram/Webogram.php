@@ -8,7 +8,6 @@
  */
 class Webogram extends Module
 {
-	protected $isActive = true;
 	protected $moduleName = "Webogram";
 
 	public function __construct()

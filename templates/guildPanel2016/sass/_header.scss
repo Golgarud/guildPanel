@@ -1,0 +1,73 @@
+#main-header{
+	position: relative;
+	display: block;
+	float: left;
+	height: 3.5rem;
+	width: 100%;
+
+	background-color: $darker-color;
+	h1{
+		position: relative;
+		display: block;
+		width: auto;
+		float: left;
+		margin-top: 0.4rem;
+		margin-right: 2rem;
+
+		color: $fCMenu;
+		font-size: 2rem;
+	}
+}
+
+#main-logo{
+	position: relative;
+	display: block;
+	float: left;
+
+	margin-left: 1.1rem;
+	margin-right: 1.1rem;
+}
+
+#auth-form{
+	width: 50rem;
+	float: right;
+	margin-top: 0.5rem;
+	color: $auth-btn-color;
+	overflow: hidden;
+	.insc-only{
+		display: none;
+	}
+
+	span{
+		position: relative;
+		display: block;
+		float: left;
+	}
+
+	.input-miel, .insc-only{
+		visibility: hidden;
+		width: 0;
+		height: 0;
+	}
+	.input-auth{
+		position:relative;
+		width: 12rem;
+		display: block;
+		float: left;
+		margin-left: 0.5rem;
+
+	}
+	.btn-auth{
+		display: block;
+		position: absolute;
+		width: 2.5rem;
+		height: 2rem;
+		padding: 0;
+		background-color: $auth-btn-color;
+		border: 0.1rem solid $auth-btn-border;
+		color: $auth-icon-color;
+		line-height: 1.9rem;
+		margin-left: 0.5rem;
+		right: 0;
+	}
+}
