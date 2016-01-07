@@ -19,4 +19,4 @@
 		{/if}
 	{/foreach}
 	<!--Here you can hook your module toolbar-->
-</menu>plop
+</menu>
