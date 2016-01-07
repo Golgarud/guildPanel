@@ -11,9 +11,9 @@
 	background: white;
 	border: 0.2rem solid white;
 	padding-top: 2rem;
-		padding-left: 1rem;
-		padding-right: 1rem;
-		padding-bottom: 1rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-bottom: 1rem;
 	//module sizer
 	&.module-disclaimer {
 		//
@@ -65,11 +65,11 @@
 		width: 100%;
 		display: block;
 		float: left;
-		iframe{
-			max-width: 100%;
+		iframe {
+			width: 100%;
+			height: 100%;
 		}
 	}
-
 }
 
 .module2 {
@@ -89,7 +89,7 @@
 	z-index: 2;
 }
 
-.module-option{
+.module-option {
 	display: none;
 	z-index: 99999999999;
 	position: fixed;
@@ -107,7 +107,7 @@
 		&:hover {
 			background-color: #DEF;
 		}
-		.info{
+		.info {
 			color: #497495;
 			font-size: 1rem;
 		}
