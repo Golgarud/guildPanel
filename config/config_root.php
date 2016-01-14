@@ -1,6 +1,5 @@
 <?php
 // config
-
 function rp( $path )
 {
 	$out = array();
@@ -10,18 +9,20 @@ function rp( $path )
 		{
 			continue;
 		}
-		elseif ($fold == '..' && $i > 0 && end($out) != '..')
+		elseif ($fold == '..' && $i > 0 && end($out) != '..') 
 		{
 			array_pop($out);
 		}
-   		else
-   		{
-   			$out[]= $fold;
-   		}
+		else
+		{
+			$out[]= $fold;
+		}
 	}
 	return ($path{0}=='/'?'/':'').join('/', $out);
 }
-
+$root = explode( basename($_SERVER['PHP_SELF']), $_SERVER["PHP_SELF"] );
+define("ROOT_DIR",$root[0]);
+define("ROOT_URL", "http://" . $_SERVER['HTTP_HOST'] . ROOT_DIR);
 
 define("CONFIG_DIR", rp("./config") );
 

@@ -17,12 +17,12 @@ class BattlenetOAuth2 extends Module
 
 	private $client;
 	private $auth_url;
-	private $client_id = 'e8eu7zcg99rmpveekk8kccp3b2b5zwjs';
-	private $client_secret = 'vkPykH6XmKcfrbEjDwa49BWRemFR2wGz';
+	private $client_id = BLIZZ_API_ID;
+	private $client_secret = BLIZZ_API_SECRET;
 	private $state = 'test';
 	private $scope = 'wow.profile'; // FETCH WOW DATA
 	// private $redirect_uri = "https://dev.battle.net/";
-	private $redirect_uri = BASE_URL;
+	private $redirect_uri = ROOT_URL;
 	private $authorize_uri = 'https://eu.battle.net/oauth/authorize';
 	private $token_uri = 'https://eu.battle.net/oauth/token';
 
